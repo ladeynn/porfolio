@@ -1,0 +1,707 @@
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img, video, iframe {
+    max-width: 100%; 
+    display: block; 
+}
+
+/* --- TIPOGRAFÍA GENERAL Y TAMAÑOS --- */
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #111;
+    color: #f0f0f0;
+    line-height: 1.6;
+    
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; 
+    margin: 0;
+    padding: 0;
+}
+
+/* --- MENÚ FIJO --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.menu-links a:hover {
+    color: #d185e4;
+}
+
+/* --- FOTO DE PORTADA (HERO) --- */
+.hero {
+    height: 100vh;
+    width: 100%;
+
+    background-image: url('img/maincover.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem; 
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: white;
+}
+
+.btn-cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-cta:hover {
+    background: white;
+    color: black;
+}
+
+/* --- CV TIMELINE --- */
+.about-cv-narrative {
+    background-color: #111;
+
+    position: relative;
+    min-height: 100vh; 
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-dark {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.85); 
+    z-index: 1;
+}
+
+.narrative-container {
+    position: relative;
+    z-index: 2;
+    max-width: 100%; 
+    width: 100%; 
+    padding: 0; 
+}
+
+/* Títulos de sección */
+h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #d185e4;
+    margin-bottom: 20px;
+}
+
+.top-text {
+    text-align: left;
+   
+    width: 70%; 
+    max-width: 1000px; 
+    margin-left: 5%; 
+    margin-right: auto;
+}
+
+/* 2. TEXTO DE ABAJO (Derecha -> Cruza al centro) */
+.bottom-text {
+    text-align: right;
+    width: 70%; 
+    max-width: 1000px;
+    margin-left: auto; 
+    margin-right: 5%; 
+}
+
+/* 3. ESTILOS COMUNES */
+.top-text h2 {
+    color: #d185e4;
+    margin-bottom: 20px;
+    font-size: 3rem; 
+}
+
+.top-text p, .bottom-text p {
+    font-size: 1.3rem; 
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+/* --- LA LÍNEA DE TIEMPO --- */
+.timeline-visual {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    justify-items: center; 
+    align-items: center; 
+    
+    width: 100%; 
+    height: 350px; 
+    margin: 60px 0;
+    padding: 0;
+}
+
+/* garabato conector */
+.connector {
+    position: absolute;
+    top: 50%;
+    left: 0; 
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none;
+    text-align: center;
+    overflow: hidden; 
+}
+
+.squiggle {
+    width: 90%; 
+    height: auto;
+    max-height: 150px; 
+    opacity: 0.6;
+    filter: invert(1);
+    object-fit: fill;
+}
+
+/* 5. Para que polaroids para que no se peguen a los bordes */
+.polaroid-item {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    width: 250px;
+   
+}
+
+.polaroid-frame {
+    background: white; 
+    padding: 15px 15px 40px 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); 
+    transition: transform 0.3s;
+}
+
+.polaroid-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(20%);
+}
+
+.polaroid-item:hover .polaroid-frame {
+     transform: scale(1.05) rotate(0deg) !important;
+     z-index: 20;
+}
+
+/* Rotaciones */
+.rotate-left { 
+    left: 90px;
+}  
+.rotate-right { transform: rotate(5deg); }
+
+
+/* --- AJUSTE PARA MÓVIL --- */
+@media (max-width: 768px) {
+    .timeline-visual {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: flex-start;
+        gap: 50px;
+    }
+
+    .connector {
+        position: relative; 
+        width: 100px;
+        left: auto;
+        transform: rotate(90deg); 
+        z-index: 1;
+    }
+}
+
+
+/* --- NUEVA VISTA DE PESTAÑAS Y PROYECTOS --- */
+
+/* Ajustes del contenedor principal */
+#categories-view {
+    width: 100%;        
+    max-width: 100%;    
+    margin: 0;
+    padding: 100px 5%;  
+    min-height: 80vh;
+}
+
+/* 1. ESTILOS DE LAS TABS */
+.tabs-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap; 
+    gap: 5px;
+    margin-bottom: 0;
+    
+    width: 100%; 
+    border-bottom: 2px solid #fff; 
+}
+
+/* la pestaña */
+.tab-btn {
+    position: relative;
+    background-color: #222; 
+    color: #888;
+    
+    border: none;
+    border-radius: 10px 10px 0 0;
+    
+    padding: 15px 40px; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem; 
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    top: 2px; 
+    z-index: 1;
+}
+
+/* Hover */
+.tab-btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* PESTAÑA ACTIVA */
+.tab-btn.active {
+    background-color: #fff; 
+    color: #000; 
+    top: 0; 
+    z-index: 10; 
+    box-shadow: 0 -5px 15px rgba(255, 255, 255, 0.1); 
+}
+
+/* 3D */
+.tab-btn.tab-purple.active {
+    background-color: #d185e4;
+    color: black;
+    box-shadow: 0 0 20px #d185e4; /* Resplandor neón */
+}
+
+/* Environment */
+.tab-btn.tab-blue.active {
+    background-color: #54a0ff;
+    color: black;
+    box-shadow: 0 0 20px #54a0ff;
+}
+
+/* Characters */
+.tab-btn.tab-green.active {
+    background-color: #2ed573;
+    color: black;
+    box-shadow: 0 0 20px #2ed573;
+}
+
+/* UI */
+.tab-btn.tab-yellow.active {
+    background-color: #dfe485;
+    color: black;
+    box-shadow: 0 0 20px #dfe485;
+}
+
+/* --- CONTENEDOR DE ABAJO --- */
+#categories-view {
+    padding-top: 50px; 
+}
+
+.projects-grid {
+    display: none;
+    background-color: transparent; 
+    padding: 40px 0; 
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* --- EMINIATURAS --- */
+.project-thumbnail {
+    border-radius: 0; 
+    border: 1px solid #333;
+}
+
+.project-thumbnail:hover {
+    border-color: #fff;
+}
+
+/* 2. ESTILOS DE LAS REJILLAS DE PROYECTOS */
+.projects-grid {
+    display: none; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px; 
+    padding-top: 50px;
+    animation: fadeIn 0.5s ease;
+}
+
+.projects-grid.active-grid {
+    display: grid;
+}
+
+/* Animacion simple */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 3. MINIATURAS */
+.project-thumbnail {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    border-radius: 0; /* Bordes rectos */
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+
+.project-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    filter: brightness(0.8);
+}
+
+.thumb-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.thumb-overlay h3 {
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    transform: translateY(20px); 
+    transition: transform 0.3s ease;
+}
+
+/* Hover */
+.project-thumbnail:hover img {
+    transform: scale(1.05); 
+}
+
+.project-thumbnail:hover .thumb-overlay {
+    opacity: 1;
+}
+
+.project-thumbnail:hover .thumb-overlay h3 {
+    transform: translateY(0); 
+}
+
+/* --- MÓVIL --- */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    .tab-btn {
+        padding: 10px 20px; 
+        font-size: 0.9rem;
+    }
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000;
+    font-size: 0.9rem;
+}
+
+footer a { color: #d185e4; }
+
+/* --- RESPONSIVE (MÓVIL) --- */
+@media (max-width: 768px) {
+    
+    .hero h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    
+    .timeline-visual {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .connector img {
+        transform: rotate(90deg);
+        width: 100px;
+        margin: 20px 0;
+    }
+
+    .narrative-container, .bottom-text {
+        text-align: center;
+        width: 100%; /* En móvil usamos todo el ancho */
+        margin: 0;
+        padding: 0 20px;
+    }
+    
+    .polaroid-item { margin: 0 auto; }
+}
+
+/* --- ESTILOS PARA LA VISTA DE DETALLES DE PROYECTO --- */
+
+.hidden {
+    display: none !important;
+}
+
+.project-details-view {
+    background-color: #111;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+}
+
+/* 2 columnas  */
+.details-container {
+    display: grid;
+    grid-template-columns: 35% 65%; 
+    gap: 40px;
+    
+    width: 100%; 
+    max-width: 100%;
+    margin: 0;
+    padding: 0;  
+}
+
+/* --- COLUMNA IZQUIERDA --- */
+.details-left {
+    position: relative;
+    height: 100%;       
+    padding-left: 5%;   
+    padding-right: 40px;
+}
+
+.sticky-content {
+    position: sticky;
+    top: 120px;
+    align-self: start; 
+    max-width: 450px;
+}
+
+.project-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #d185e4; 
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.project-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.btn-back {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background: white;
+    color: black;
+}
+
+/* --- COLUMNA DERECHA --- */
+.details-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    align-content: start; 
+
+    padding-right: 5%;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 4px;
+    display: block;
+}
+
+/* Para las fotos grandes */
+.full-width {
+    grid-column: span 2; 
+    aspect-ratio: 16 / 9;
+}
+
+/* Para las fotos pequeñas*/
+.half-width {
+    grid-column: span 1; 
+    aspect-ratio: 5 / 4; 
+}
+
+
+/* --- BOTÓN NEXT PROJECT --- */
+.next-project-container {
+    grid-column: span 2; 
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.btn-next {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-next:hover {
+    background: white;
+    color: black;
+}
+
+/* --- RESPONSIVE (MÓVIL) --- */
+@media (max-width: 900px) {
+    .details-container {
+        grid-template-columns: 1fr; 
+        gap: 40px;
+    }
+    .sticky-content {
+        position: relative;
+        top: 0;
+    }
+    
+    .details-left { order: 1; }
+    .details-right { order: 2; }
+
+    .project-title { font-size: 2.5rem; }
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+.project-navigation {
+    position: fixed;
+    bottom: 50px;
+    left: 0;            
+    width: 100%;       
+    padding: 0 5%;   
+    box-sizing: border-box; 
+    
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    z-index: 1000; 
+    pointer-events: none;
+}
+
+.project-navigation button {
+    pointer-events: all;
+    background-color: #111;
+    padding: 10px 25px;
+    border: 2px solid white;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); 
+}
+
+.project-navigation button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* --- CLASE ESPECIAL PARA CHARACTER SHEETS --- */
+.vertical-sheet {
+    grid-column: span 2;   
+    width: 100%;
+    
+    aspect-ratio: 4 / 5;   
+    
+    object-fit: cover;   
+    border-radius: 4px;
+    display: block;
+}

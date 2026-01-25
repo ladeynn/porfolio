@@ -3,40 +3,869 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laura's Porfolio</title>
-    <style>
-        body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        header { text-align: center; padding: 50px 20px; background: white; }
-        h1 { margin: 0; font-weight: 300; letter-spacing: 2px; }
-        
-        /* Estilo de la galería */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .artwork { width: 100%; height: auto; display: block; }
-        .artwork-container { background: white; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    </style>
+    <title>Laura's porfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <h1>Laura</h1>
-        <p>3D modeling | Enviroments | Concept Art</p>
+    <nav class="navbar">
+        <div class="logo">Laura's porfolio</div>
+        <div class="menu-links">
+            <a href="#inicio">Home</a>
+            <a href="#sobre-mi">About</a>  <a href="#galeria">Porfolio</a>
+            <a href="#contacto">Contact</a>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Laura's porfolio</h1>
+            <p>3D Modeling and Concept Art</p>
+            <a href="#galeria" class="btn-cta">Porfolio</a>
+        </div>
     </header>
 
-    <div class="gallery">
-        <div class="artwork-container">
-            <img src="ruta-de-tu-imagen-1.jpg" alt="Obra 1" class="artwork">
-        </div>
-        <div class="artwork-container">
-            <img src="ruta-de-tu-imagen-2.jpg" alt="Obra 2" class="artwork">
-        </div>
+    <section id="sobre-mi" class="about-cv-narrative">
+    
+
+    <div class="narrative-container">
+        
+        <div class="top-text">
+            <p>A Madrid-based proactive Video Game Design and Development student, eager to work in the audiovisual field. 
+                I’m passionate about creating worlds and characters, but I especially enjoy creating environments to tell 
+                stories from another perspective. In my free time i like to devour books and play video games, always eager 
+                to immerse myself in a new story. People say I’m a good team, easy-going and a creative person.</p>
         </div>
 
+        <div class="timeline-visual">
+            
+            <div class="polaroid-item rotate-left">
+                <div class="polaroid-frame" alt="Yo de pequeña">
+                    <img src="img/yo.jpg">
+                </div>
+            </div>
+
+            <div class="connector">
+                <img src="img/squiggle_line.png" alt="línea" class="squiggle">
+            </div>
+
+            <div class="polaroid-item rotate-right">
+                 <div class="polaroid-frame">
+                    <img src="img/yo_dibujo.jpg" alt="Yo ahora">
+                 </div>
+            </div>
+        </div>
+
+        <div class="bottom-text">
+            <p>Tools and Skills</p>
+            <p>Procreate and Photoshop</p>
+            <p>Unity</p>
+            <p>3D Studio Max and Blender</p>
+            <p>Substance Painter</p> 
+            <a href="img/cv-laura.pdf" target="_blank" rel="noopener noreferrer" class="btn-cta small-btn">Resume (PDF)</a>
+        </div>
+
+    </div>
+</section>
+
+    <main id="galeria">
+
+    <section id="categories-view">
+    
+    <div class="tabs-container">
+        <button class="tab-btn tab-purple active" data-tab="grid-3d">3D Models</button>
+        <button class="tab-btn tab-blue" data-tab="grid-env">Environment</button>
+        <button class="tab-btn tab-green" data-tab="grid-char">Characters</button>
+        <button class="tab-btn tab-yellow" data-tab="grid-ui">UI Design</button>
+    </div>
+
+    <div id="grid-3d" class="projects-grid active-grid">
+        <div class="project-thumbnail view-btn" data-target="section-3d-proj1">
+            <img src="img/secret-lib/down.jpg" alt="Library 3D">
+            <div class="thumb-overlay">
+                <h3>Secret Library</h3>
+            </div>
+        </div>
+
+
+        <div class="project-thumbnail view-btn" data-target="section-3d-proj2">
+            <img src="img/catpuccino/catpuccino-main.jpg" alt="Catpuccino 3D">
+            <div class="thumb-overlay">
+                <h3>Catpuccino</h3> 
+            </div>
+        </div>
+
+        <div class="project-thumbnail view-btn" data-target="section-3d-proj3">
+            <img src="img/witch-study/stairs-witch.jpg" alt="Cursed by Magic">
+            <div class="thumb-overlay">
+                <h3>Secret Library</h3>
+            </div>
+        </div>
+
+        <div class="project-thumbnail view-btn" data-target="section-3d-proj4">
+             <img src="img/Argider/argider-detalle.jpg" alt="Elf Antagonist">
+             <div class="thumb-overlay">
+                 <h3>Argider</h3>
+             </div>
+        </div>
+
+        <div class="project-thumbnail view-btn" data-target="section-3d-proj5">
+             <img src="img/Dorcas/dorcas-face.jpg" alt="Character 2">
+             <div class="thumb-overlay">
+                 <h3>Dorcas</h3>
+             </div>
+        </div>
+
+    </div>
+
+    <div id="grid-env" class="projects-grid">
+        
+        <div class="project-thumbnail view-btn" data-target="section-env">
+            <img src="img/catpuccino/catpuccino-concept.jpg" alt="Catpuccino">
+            <div class="thumb-overlay">
+                <h3>Catpuccino Cafe</h3>
+            </div>
+        </div>
+
+        <div class="project-thumbnail view-btn" data-target="section-env-proj2">
+            <img src="img/secret-lib/lib-concept.jpg" alt="Cursed by Magic">
+            <div class="thumb-overlay">
+                <h3>Secret Library</h3>
+            </div>
+        </div>
+
+        <div class="project-thumbnail view-btn" data-target="section-env-proj3">
+            <img src="img/witch-study/final-witch.png" alt="Witch Office Cover">
+            <div class="thumb-overlay">
+                <h3>Witch's Study</h3>
+            </div>
+        </div>
+
+        <div class="project-thumbnail view-btn" data-target="section-env-proj4">
+            <img src="img/rooms/teenager-room.jpg" alt="Teen Room Cover">
+            <div class="thumb-overlay">
+                <h3>Teenager's Messy Room</h3>
+            </div>
+        </div>
+
+        <div class="project-thumbnail view-btn" data-target="section-env-proj5">
+            <img src="img/rooms/barroc-doorm.jpg" alt="Elf Dorm Cover">
+            <div class="thumb-overlay">
+                <h3>Baroque Elf Dorm</h3>
+            </div>
+        </div>
+
+        <div class="project-thumbnail view-btn" data-target="section-env-proj6">
+            <img src="img/rooms/cementary.jpg" alt="Cemetery Cover">
+            <div class="thumb-overlay">
+                <h3>Cemetery at Dawn</h3>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <div id="grid-char" class="projects-grid">
+        <div class="project-thumbnail view-btn" data-target="section-char-proj1">
+             <img src="img/Aegis/char-cover.jpg" alt="Character 1">
+             <div class="thumb-overlay">
+                 <h3>Aegis</h3>
+             </div>
+        </div>
+        <div class="project-thumbnail view-btn" data-target="section-char-proj2">
+             <img src="img/Dorcas/dorcas-concept.jpg" alt="Character 2">
+             <div class="thumb-overlay">
+                 <h3>Dorcas</h3>
+             </div>
+        </div>
+        <div class="project-thumbnail view-btn" data-target="section-char-proj3">
+             <img src="img/Argider/argider_concept.jpg" alt="Elf Antagonist">
+             <div class="thumb-overlay">
+                 <h3>Argider</h3>
+             </div>
+        </div>
+
+        <div class="project-thumbnail view-btn" data-target="section-char-proj4">
+             <img src="img/Oliver/Oliver-2D.jpg" alt="Oliver">
+             <div class="thumb-overlay">
+                 <h3>Oliver</h3>
+             </div>
+        </div>
+
+        <div class="project-thumbnail view-btn" data-target="section-char-proj5">
+             <img src="img/James/James-2D.jpg" alt="James">
+             <div class="thumb-overlay">
+                 <h3>James</h3>
+             </div>
+        </div>
+
+        <div class="project-thumbnail view-btn" data-target="section-char-proj6">
+             <img src="img/Nican/nikan-char.jpg" alt="N.I.C.A.N Squad">
+             <div class="thumb-overlay">
+                 <h3>N.I.C.A.N Squad</h3>
+             </div>
+        </div>
+
+    </div>
+
+    
+ 
+    <div id="grid-ui" class="projects-grid">
+        <div class="project-thumbnail view-btn" data-target="section-ui-proj1">
+             <img src="img/UI/ench.PNG" alt="Cursed by Magic UI">
+             <div class="thumb-overlay">
+                <h3>Cursed by Magic UI</h3>
+             </div>
+        </div>
+
+        <div class="project-thumbnail view-btn" data-target="section-ui-proj2">
+             <img src="img/UI/nikan-jug.jpg" alt="Nican UI">
+             <div class="thumb-overlay">
+                 <h3>N.I.C.A.N. UI</h3>
+             </div>
+        </div>
+    </div>
+
+    
+
+</section>
+
+    <section id="section-3d-proj1" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Cursed by Magic -<br>Secret Library</h2>
+                    
+                    <div class="project-description">
+                        <p>A barroque enviroment created for the videogame Cursed by Magic: Warlock Arcanum.</p>
+                        <p>The setting to be designed is a clandestine room inside the Magic Academy. 
+                            In the past, it was used as a meeting place for a secret society that tried to decipher 
+                            the origin of the magic that reigned in the world, but it seems that no one has been there for a long time.</p>
+                        <p>Lighting played a crucial role in this scene. TThe subtle disarray of the room suggests that the last occupants had to leave 
+                            in a hurry without looking back.</p>
+                        
+                    </div>
+                    
+                    </div>
+            </div>
+
+            <div class="details-right">
+                
+                <video class="project-img full-width" autoplay muted loop playsinline>
+                    <source src="img/secret-lib/animation.mp4" type="video/mp4">
+                    Your browser does not support HTML5 videos.
+                </video>
+                <img src="img/secret-lib/lib-concept.jpg" class="project-img half-width" alt="concept">
+                <img src="img/secret-lib/3d-cover.jpg" class="project-img half-width" alt="Detail 1">
+                <img src="img/secret-lib/up.jpg" class="project-img full-width" alt="Detail 2">
+                
+            </div>
+
+        </div> <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            
+            <button class="btn-next" data-next="section-3d-proj2">next project</button>
+        </div>
+
+    </section>
+
+    <section id="section-3d-proj2" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Catpuccino -<br>Coffee Shop</h2>
+                    <div class="project-description">
+                            <p>Environment created for the game "Catpuccino". Modeled and textured in collaboration with Ángela Sánchez.</p>
+                            <p>I developed the concept for the scene based on the ideas Ángela and I had, always aiming to convey a cozy and endearing atmosphere, typical of cozy games.</p>
+                            <p>The color palette is dominated by pastel colours, such as pinks, browns, creams and soft yellows, which channel the calm and sweetness that the game emits.</p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="details-right">
+                    <img src="img/catpuccino/catpuccino-main.jpg" class="project-img full-width" alt="Vista Principal Catpuccino">
+                    <img src="img/catpuccino/catpuccino-concept.jpg" class="project-img half-width" alt="concept">
+                    <img src="img/catpuccino/catpuccino-3d.jpg" class="project-img half-width" alt="3d">
+                    <img src="img/catpuccino/catpuccino-2d.jpg" class="project-img full-width" alt="2d">
+                    </div>
+
+        </div> <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            
+            <button class="btn-next" data-next="section-3d-proj3">next project</button>
+        </div>
+
+    </section>
+
+    <section id="section-3d-proj3" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Medieval<br>Witch's Office</h2>
+                    
+                    <div class="project-description">
+                        <p>A personal project focused on storytelling through props.</p>
+                        <p> The setting is the witch's private study. The study has two floors: the main floor and a lookout on the ground floor. 
+                            It is divided into different areas for various fields of study (potions, art, etc.), with plenty of bookshelves for learning, 
+                            and a relaxation area. The walls are made of gray stone with wooden accents at the corners.</p>
+                        <p>The scene is set in one of the rooms of a castle in a kingdom, in a high fantasy world where magic exists. 
+                            The final render will be taken in the morning.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right">
+                
+                <img src="img/witch-study/concept-witch.jpg" class="project-img half-width" alt="Detalle Pociones">
+                <img src="img/witch-study/final-witch.png" class="project-img half-width" alt="Detalle Libros">
+
+                <img src="img/witch-study/stairs-witch.jpg" class="project-img full-width" alt="Vista General">
+                <img src="img/witch-study/desk-witch.jpg" class="project-img full-width" alt="Vista Mesa">
+                <img src="img/witch-study/entrance-witch.jpg" class="project-img full-width" alt="Iluminación Nocturna">
+
+            </div>
+
+        </div> 
+
+        <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            <button class="btn-next" data-next="section-3d-proj4">next project</button>
+        </div>
+    </section>
+
+    <section id="section-3d-proj4" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Argider<br>Antagonist</h2>
+                    
+                    <div class="project-description">
+                        <p>Argider is a 17-year-old elf who attends the Academy of Magic. He comes from a prestigious family in this magic world 
+                            and grew up under strict discipline. The pressure from his mother, a professor at the Academy, led him to be a perfectionist, 
+                            proud, and obsessed with excellence.</p>
+                        <p>Tall and slender, with impeccably styled ash-blond hair and blue-gray eyes, he maintains an elegant posture and impeccable attire. 
+                            Strategic and competitive, he plans every step with precision and rarely acts impulsively. Although reserved and distant, 
+                            he has a strong sense of duty and protects those he cares about, even if he never expresses it openly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right">
+                
+                <img src="img/Argider/argider-turnaround.jpg" class="project-img full-width" alt="argider-turnaround">
+
+                <img src="img/Argider/argider_concept.jpg" class="project-img half-width" alt="argider_concept">
+                <img src="img/Argider/argider-detalle.jpg" class="project-img half-width" alt="argider-detalle">
+
+            </div>
+
+        </div> 
+
+        <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            <button class="btn-next" data-next="section-3d-proj5">next project</button>
+        </div>
+    </section>
+
+    <section id="section-3d-proj5" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Dorcas -<br>The Witch</h2>
+                    
+                    <div class="project-description">
+                        <p>Dorcas McKinnon is a 18 years old witch. She is a Black woman of average height with black hair and eyes. 
+                            Her Afro hair is styled in locs and buns made with elastic bands. She wears a button-down vest and a shirt over it, 
+                            and pants with boots.</p>
+                        <p>Dorcas is a calm but strong-willed person who loves to learn. She is also a worldly woman, 
+                            having traveled to different kingdoms to learn about diverse cultures. When she's not traveling, 
+                            she can be found in her study, provided by the queen of the castle. 
+                            The queen has entrusted her with the task of finding a cure to save her daughter. Dorcas also loves to read and paint, 
+                            which explains the large collection of books and an easel in her study. Those who know her describe her as a very beautiful person, 
+                            both inside and out.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right">
+                
+                <img src="img/Dorcas/dorcas-turnaround.jpg" class="project-img full-width" alt="dorcas-turnaround">
+
+                <img src="img/Dorcas/dorcas-concept.jpg" class="project-img half-width" alt="dorcas-concept">
+                <img src="img/Dorcas/dorcas-face.jpg" class="project-img half-width" alt="dorcas-face">
+
+                <img src="img/Dorcas/dorcas-body.jpg" class="project-img half-width" alt="dorcas-body">
+                <img src="img/Dorcas/dorcas-legs.jpg" class="project-img half-width" alt="dorcas-legs">
+
+            </div>
+
+        </div> 
+
+        <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            <button class="btn-next" data-next="section-env">next category</button>
+        </div>
+    </section>
+
+    <section id="section-env" class="project-details-view hidden">
+    <div class="details-container">
+        
+        <div class="details-left">
+            <div class="sticky-content">
+                <h2 class="project-title">Catpuccino -<br>Coffee Shop</h2>
+                <div class="project-description">
+                        <p>Environment created for the game "Catpuccino". Modeled and textured in collaboration with Ángela Sánchez.</p>
+                        <p>I developed the concept for the scene based on the ideas Ángela and I had, always aiming to convey a cozy and endearing atmosphere, typical of cozy games.</p>
+                        <p>The color palette is dominated by pastel colours, such as pinks, browns, creams and soft yellows, which channel the calm and sweetness that the game emits.</p>
+                    </div>
+                </div>
+        </div>
+
+        <div class="details-right">
+                <img src="img/catpuccino/catpuccino-main.jpg" class="project-img full-width" alt="Vista Principal Catpuccino">
+                <img src="img/catpuccino/catpuccino-concept.jpg" class="project-img half-width" alt="concept">
+                <img src="img/catpuccino/catpuccino-3d.jpg" class="project-img half-width" alt="3d">
+                <img src="img/catpuccino/catpuccino-2d.jpg" class="project-img full-width" alt="2d">
+                </div>
+
+    </div> <div class="project-navigation">
+        <button class="btn-back">go back</button>
+        
+        <button class="btn-next" data-next="section-env-proj2">next project</button>
+    </div>
+
+</section>
+
+<section id="section-env-proj2" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Cursed by Magic -<br>Secret Library</h2>
+                    
+                    <div class="project-description">
+                        <p>A barroque enviroment created for the videogame Cursed by Magic: Warlock Arcanum.</p>
+                        <p>The setting to be designed is a clandestine room inside the Magic Academy. 
+                            In the past, it was used as a meeting place for a secret society that tried to decipher 
+                            the origin of the magic that reigned in the world, but it seems that no one has been there for a long time.</p>
+                        <p>Lighting played a crucial role in this scene. TThe subtle disarray of the room suggests that the last occupants had to leave 
+                            in a hurry without looking back.</p>
+                        
+                    </div>
+                    
+                    </div>
+            </div>
+
+            <div class="details-right">
+                
+                <video class="project-img full-width" autoplay muted loop playsinline>
+                    <source src="img/secret-lib/animation.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <img src="img/secret-lib/lib-concept.jpg" class="project-img half-width" alt="concept">
+                <img src="img/secret-lib/3d-cover.jpg" class="project-img half-width" alt="Detail 1">
+                <img src="img/secret-lib/up.jpg" class="project-img full-width" alt="Detail 2">
+                
+            </div>
+
+        </div> <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            
+            <button class="btn-next" data-next="section-env-proj3">next project</button>
+        </div>
+
+    </section>
+
+    <section id="section-env-proj3" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Medieval<br>Witch's Office</h2>
+                    
+                    <div class="project-description">
+                        <p>A personal project focused on storytelling through props.</p>
+                        <p> The setting is the witch's private study. The study has two floors: the main floor and a lookout on the ground floor. 
+                            It is divided into different areas for various fields of study (potions, art, etc.), with plenty of bookshelves for learning, 
+                            and a relaxation area. The walls are made of gray stone with wooden accents at the corners.</p>
+                        <p>The scene is set in one of the rooms of a castle in a kingdom, in a high fantasy world where magic exists. 
+                            The final render will be taken in the morning.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right">
+                
+                <img src="img/witch-study/concept-witch.jpg" class="project-img half-width" alt="Detalle Pociones">
+                <img src="img/witch-study/final-witch.png" class="project-img half-width" alt="Detalle Libros">
+
+                <img src="img/witch-study/stairs-witch.jpg" class="project-img full-width" alt="Vista General">
+                <img src="img/witch-study/desk-witch.jpg" class="project-img full-width" alt="Vista Mesa">
+                <img src="img/witch-study/entrance-witch.jpg" class="project-img full-width" alt="Iluminación Nocturna">
+
+            </div>
+
+        </div> 
+
+        <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            <button class="btn-next" data-next="section-env-proj4">next project</button>
+        </div>
+    </section>
+
+    <section id="section-env-proj4" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Teenager's -<br> Messy Room</h2>
+                    <div class="project-description">
+                        <p>A contemporary environment focusing on environmental storytelling through clutter.</p>
+                        <p>This room belongs to a chaotic teenager who loves blue. The challenge was to make the mess feel natural and lived-in, scattering personal objects, clothes, and posters to define the character's personality without showing them.</p>
+                        <p>The lighting is soft daylight, emphasizing the cool blue tones.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right">
+                <img src="img/rooms/teenager-room.jpg" class="project-img full-width" alt="Vista General Habitación Azul">
+            </div>
+        </div>
+
+        <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            <button class="btn-next" data-next="section-env-proj5">next project</button>
+        </div>
+    </section>
+
+
+    <section id="section-env-proj5" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Baroque <br>Elf Dormitory</h2>
+                    <div class="project-description">
+                        <p>A fantasy environment blending baroque architecture with magical elements for an elven academy.</p>
+                        <p>The color palette is rich in deep greens, purples, and gold accents, conveying luxury and ancient magic. Ornate furniture, magical plants, and glowing runes fill the space.</p>
+                        <p>I focused on detailed texturing for the wood carvings and gold trims to achieve an opulent baroque feel.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right">
+                <img src="img/rooms/barroc-doorm.jpg" class="project-img full-width" alt="Vista Dormitorio Elfo">
+            </div>
+        </div>
+
+        <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            <button class="btn-next" data-next="section-env-proj6">next project</button>
+        </div>
+    </section>
+
+
+    <section id="section-env-proj6" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Cemetery at Dawn<br>at Dawn</h2>
+                    <div class="project-description">
+                        <p>An atmospheric exterior scene capturing the specific lighting of sunrise.</p>
+                        <p>The composition features an old church and a prominent weathered statue. The goal was to capture the quiet, melancholic beauty of the church, caught in the early sun rays.</p>
+                        <p>Heavy use of organic modeling for foliage and weathered stone texturing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right">
+                <img src="img/rooms/cementary.jpg" class="project-img full-width" alt="Vista Cementerio Amanecer">
+            </div>
+        </div>
+
+        <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            <button class="btn-next" data-next="section-char-proj1">next category</button>
+        </div>
+    </section>
+
+    <section id="section-char-proj1" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Aegis -<br>Main character</h2>
+                    
+                    <div class="project-description">
+                        <p>Character design for a fantasy RPG project.</p>
+                        <p>Aegis is a master's student at Blackmoor University, a prestigious institution in a world where magic and technology coexist. 
+                            From a young age, he displayed an innate talent for magic, which led to his admission to the Applied Arcane Arts program.</p>
+                        <p>However, after an accident during a forbidden experiment, Aegis was marked with a curse that consumes his body every time he 
+                            uses magic. In his quest for a cure, he delves into the city's occult underworld, confronting cults, 
+                            creatures from other dimensions, and his own decay.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right">
+                <img src="img/Aegis/aegis-charactersheet.jpg" class="project-img vertical-sheet" alt="Character Sheet">
+            </div>
+
+        </div> 
+
+        <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            <button class="btn-next" data-next="section-char-proj2">next project</button>
+        </div>
+    </section>
+
+    <section id="section-char-proj2" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Dorcas -<br>The Witch</h2>
+                    
+                    <div class="project-description">
+                        <p>Dorcas McKinnon is a 18 years old witch. She is a Black woman of average height with black hair and eyes. 
+                            Her Afro hair is styled in locs and buns made with elastic bands. She wears a button-down vest and a shirt over it, 
+                            and pants with boots.</p>
+                        <p>Dorcas is a calm but strong-willed person who loves to learn. She is also a worldly woman, 
+                            having traveled to different kingdoms to learn about diverse cultures. When she's not traveling, 
+                            she can be found in her study, provided by the queen of the castle. 
+                            The queen has entrusted her with the task of finding a cure to save her daughter. Dorcas also loves to read and paint, 
+                            which explains the large collection of books and an easel in her study. Those who know her describe her as a very beautiful person, 
+                            both inside and out.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right">
+                
+                <img src="img/Dorcas/dorcas-turnaround.jpg" class="project-img full-width" alt="dorcas-turnaround">
+
+                <img src="img/Dorcas/dorcas-concept.jpg" class="project-img half-width" alt="dorcas-concept">
+                <img src="img/Dorcas/dorcas-face.jpg" class="project-img half-width" alt="dorcas-face">
+
+                <img src="img/Dorcas/dorcas-body.jpg" class="project-img half-width" alt="dorcas-body">
+                <img src="img/Dorcas/dorcas-legs.jpg" class="project-img half-width" alt="dorcas-legs">
+
+            </div>
+
+        </div> 
+
+        <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            <button class="btn-next" data-next="section-char-proj3">next project</button>
+        </div>
+    </section>
+
+    <section id="section-char-proj3" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Argider<br>Antagonist</h2>
+                    
+                    <div class="project-description">
+                        <p>Argider is a 17-year-old elf who attends the Academy of Magic. He comes from a prestigious family in this magic world 
+                            and grew up under strict discipline. The pressure from his mother, a professor at the Academy, led him to be a perfectionist, 
+                            proud, and obsessed with excellence.</p>
+                        <p>Tall and slender, with impeccably styled ash-blond hair and blue-gray eyes, he maintains an elegant posture and impeccable attire. 
+                            Strategic and competitive, he plans every step with precision and rarely acts impulsively. Although reserved and distant, 
+                            he has a strong sense of duty and protects those he cares about, even if he never expresses it openly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right">
+                
+                <img src="img/Argider/argider-turnaround.jpg" class="project-img full-width" alt="argider-turnaround">
+
+                <img src="img/Argider/argider_concept.jpg" class="project-img half-width" alt="argider_concept">
+                <img src="img/Argider/argider-detalle.jpg" class="project-img half-width" alt="argider-detalle">
+
+            </div>
+
+        </div> 
+
+        <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            <button class="btn-next" data-next="section-char-proj4">next project</button>
+        </div>
+    </section>
+
+    <section id="section-char-proj4" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Olvier -<br>Catpuccino Customer</h2>
+                    
+                    <div class="project-description">
+                        <p>Character design for an NPC in the "Catpuccino" game.</p>
+                        <p>This character is a regular customer of the cafe. I maintained the same cozy, pastel aesthetic established in the environment design to ensure they fit perfectly in the scene.</p>
+                        <p>Oliver has curly red hair and beauty marks on his face. He wears a periwinkle turtleneck sweater
+                            and dark gray trousers. His personality is impatient and introverted.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right">
+                
+                <img src="img/Oliver/Oliver-2D.jpg" class="project-img full-width" alt="Customer Expressions">
+                <img src="img/Oliver/oliver.jpg" class="project-img full-width" alt="3D">
+
+            </div>
+
+        </div> 
+
+        <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            <button class="btn-next" data-next="section-char-proj5">next project</button>
+        </div>
+    </section>
+
+
+    <section id="section-char-proj5" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">James -<br>Catpuccino Customer</h2>
+                    
+                    <div class="project-description">
+                        <p>NPC designed for the "Catpuccino" coffee shop.</p>
+                        <p>The outfit features soft fabrics and oversized accessories to emphasize the cute and relaxing vibe of the game.</p>
+                        <p>James is a customer with wavy black hair. He wears a loose-fitting pastel green sweater that reveals a shirt collar underneath. 
+                            His trousers are brown. He is an extroverted and expressive character; his emotions are clearly reflected on his face.</p>
+                        <p>I used a slightly more muted color palette (creams and browns) to connect them visually with the coffee elements of the environment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right">
+                
+                <img src="img/James/James-2D.jpg" class="project-img full-width" alt="Customer Expressions">
+                <img src="img/James/james.jpg" class="project-img full-width" alt="3D">
+
+            </div>
+
+        </div> 
+
+        <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            <button class="btn-next" data-next="section-char-proj6">next project</button>
+        </div>
+    </section>
+
+    <section id="section-char-proj6" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">N.I.C.A.N.<br>Squad</h2>
+                    
+                    <div class="project-description">
+                        <p>A character lineup designed for a 4v4 "Capture the Flag" multiplayer game set in space.</p>
+                        <p>The goal was to create 4 distinct classes (Tank, Support, DPS, Mechanic) the main goal was to create distinct heroes 
+                            for a First-Person perspective. Silhouette readability was priority #1: players need to identify the enemy class instantly
+                             during fast-paced combat.</p>
+                        <p>While they share a cohesive sci-fi and steampunk technology, each character has unique shape language and color 
+                            accents to visually communicate their abilities and role within the team.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right">
+                
+                <img src="img/Nican/nikan-char.jpg" class="project-img full-width" alt="Space Squad Lineup">
+
+            </div>
+
+        </div> 
+
+        <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            <button class="btn-next" data-next="section-ui-proj1">next category</button>
+        </div>
+    </section>
+
+    <section id="section-ui-proj1" class="project-details-view hidden">
+        <div class="details-container">
+            
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Cursed by Magic<br>UI / UX</h2>
+                    <div class="project-description">
+                        <p>User Interface designed for the game "Cursed by Magic".</p>
+                        <p>The goal was to translate the game's baroque aesthetic into the interface. I used ornate gold frames, dark parchment textures, and magical glowing effects to make the UI feel diegetic—part of the wizard's world.</p>
+                        <p><strong>Key Elements:</strong> Spell selection wheel, inventory system, and dynamic health/mana bars inspired by liquid potions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right"> 
+                <img src="img/UI/ench.PNG" class="project-img full-width" alt="Main Menu Screen">
+                <img src="img/UI/misions.PNG" class="project-img full-width" alt="In-Game HUD">
+                <img src="img/UI/diary.PNG" class="project-img full-width" alt="Inventory UI">
+                <img src="img/UI/options.PNG" class="project-img full-width" alt="Spell Icons & Wheel">
+            </div>
+
+        </div> 
+
+        <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            <button class="btn-next" data-next="section-ui-proj2">next project</button>
+        </div>
+    </section>
+
+    <section id="section-ui-proj2" class="project-details-view hidden">
+        <div class="details-container">
+        
+            <div class="details-left">
+                <div class="sticky-content">
+                    <h2 class="project-title">Nican<br>Tactical UI</h2>
+                    <div class="project-description">
+                        <p>User Interface for "Nican", the 4v4 tactical shooter project.</p>
+                        <p>Following the gameplay needs of a competitive shooter (inspired by Valorant), the UI prioritizes clarity and instant readability. The aesthetic is clean, sharp, and futuristic.</p>
+                        <p><strong>Design Focus:</strong> Minimizing visual noise in the HUD so players can focus on aiming, while using distinct color coding (Teal vs Red) for Ally/Enemy recognition.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right">
+                <img src="img/UI/nikan-jug.jpg" class="project-img full-width" alt="Player Selection Screen">
+                <img src="img/UI/nikan-game.jpg" class="project-img full-width" alt="In-Game HUD View">
+                <img src="img/UI/nikan-prin.jpg" class="project-img full-width" alt="Main menu">
+            </div>
+
+        </div> 
+
+        <div class="project-navigation">
+            <button class="btn-back">go back</button>
+            <button class="btn-next" data-next="section-3d-proj1">back to start</button>
+        </div>
+    </section>
+
+</main>
+
+    <footer id="contacto">
+        <h2>Let's create together!</h2>
+        <p>Write me at <a href="mailto:lauradcc13@gmail.com">lauradcc13@gmail.com</a></p>
+        <div class="socials">
+            <span>LinkedIn</span> | <span>Itchi.io</span>
+        </div>
+    </footer>
+
+<script src="script.js"></script> 
 </body>
 </html>
