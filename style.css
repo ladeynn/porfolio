@@ -705,3 +705,63 @@ footer a { color: #d185e4; }
     border-radius: 4px;
     display: block;
 }
+
+/* ========================================= */
+/* PARA MÓVIL */
+
+@media (max-width: 768px) {
+    
+    /* MENÚ SUPERIOR */
+    .navbar {
+        flex-direction: column;
+        padding: 15px 10px;
+        gap: 15px;
+    }
+    .menu-links {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 15px;
+    }
+    .menu-links a {
+        margin-left: 0; 
+        font-size: 0.85rem;
+    }
+
+    /* TEXTOS DE LOS PROYECTOS */
+    .details-left {
+        padding-right: 5%; 
+    }
+    .project-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    /* REJILLA DE IMÁGENES */
+    .details-right {
+        grid-template-columns: 1fr; 
+        padding-right: 5%; 
+        padding-left: 5%;
+        gap: 30px; 
+    }
+    
+    
+    .full-width, .half-width, .vertical-sheet {
+        grid-column: span 1; 
+        height: auto;
+    }
+
+    /* BOTONES FLOTANTES DE NAVEGACIÓN */
+    .project-navigation {
+        bottom: 20px; 
+    }
+    .project-navigation button {
+        padding: 8px 15px;
+        font-size: 0.75rem; 
+    }
+
+    /* SECCIÓN SOBRE MÍ */
+    .bottom-text {
+        padding-bottom: 50px; 
+    }
+}
