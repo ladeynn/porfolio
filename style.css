@@ -737,8 +737,7 @@ footer a { color: #d185e4; }
         margin-bottom: 15px;
     }
 
-    /* 3. IMÁGENES: La solución mágica al solapamiento */
-    /* Cambiamos de Grid a Flexbox (columna simple) que no falla nunca */
+    /* 3. IMÁGENES */
     .details-right {
         display: flex;
         flex-direction: column;
@@ -747,7 +746,6 @@ footer a { color: #d185e4; }
         gap: 30px; 
     }
     
-    /* Forzamos a que el navegador respete la altura real de la foto */
     .project-img {
         height: auto !important; 
         max-height: none !important;
@@ -757,25 +755,43 @@ footer a { color: #d185e4; }
         width: 100% !important;
     }
 
-    /* 4. BOTONES: Alineados perfectamente */
+    /* 4. BOTONES */
     .project-navigation {
-        bottom: 20px;
-        align-items: center;
+        bottom: 35px; 
+        gap: 10px;    
+        z-index: 9999; 
     }
+    
     .project-navigation button {
-        padding: 0 15px;
-        font-size: 0.75rem; 
-        white-space: nowrap; /* Prohíbe que el texto se parta en dos líneas */
-        height: 40px; /* Misma altura exacta para los dos botones */
+        max-width: 48%; 
+        padding: 10px 5px;
+        font-size: 0.7rem; 
+        white-space: normal; 
+        height: auto;
+        min-height: 44px;
+        line-height: 1.2;
         
-        /* Centramos el texto por si sobra espacio */
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
     }
 
-    /* 5. SEPARACIÓN FINAL (Para que no se pelee con el footer de contacto) */
+    /* 5. SEPARACIÓN FINAL */
     .project-details-view {
-        padding-bottom: 100px; /* Deja espacio al final de las fotos */
+        padding-bottom: 100px; 
+    }
+
+    /* 6. PORTADA MÓVIL */
+    .hero {
+        background-attachment: scroll !important; 
+        background-position: center center;
+        min-height: 100vh;
+        height: 100vh;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem; 
+        line-height: 1.2;
     }
 }
