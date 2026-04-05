@@ -709,9 +709,9 @@ footer a { color: #d185e4; }
 /* ========================================= */
 /* PARA MÓVIL */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     
-    /* MENÚ SUPERIOR */
+    /* 1. MENÚ SUPERIOR */
     .navbar {
         flex-direction: column;
         padding: 15px 10px;
@@ -728,40 +728,54 @@ footer a { color: #d185e4; }
         font-size: 0.85rem;
     }
 
-    /* TEXTOS DE LOS PROYECTOS */
+    /* 2. TEXTOS DE LOS PROYECTOS */
     .details-left {
         padding-right: 5%; 
     }
     .project-title {
-        font-size: 2rem;
+        font-size: 2rem; 
         margin-bottom: 15px;
     }
 
-    /* REJILLA DE IMÁGENES */
+    /* 3. IMÁGENES: La solución mágica al solapamiento */
+    /* Cambiamos de Grid a Flexbox (columna simple) que no falla nunca */
     .details-right {
-        grid-template-columns: 1fr; 
+        display: flex;
+        flex-direction: column;
         padding-right: 5%; 
         padding-left: 5%;
         gap: 30px; 
     }
     
+    /* Forzamos a que el navegador respete la altura real de la foto */
+    .project-img {
+        height: auto !important; 
+        max-height: none !important;
+    }
     
     .full-width, .half-width, .vertical-sheet {
-        grid-column: span 1; 
-        height: auto;
+        width: 100% !important;
     }
 
-    /* BOTONES FLOTANTES DE NAVEGACIÓN */
+    /* 4. BOTONES: Alineados perfectamente */
     .project-navigation {
-        bottom: 20px; 
+        bottom: 20px;
+        align-items: center;
     }
     .project-navigation button {
-        padding: 8px 15px;
+        padding: 0 15px;
         font-size: 0.75rem; 
+        white-space: nowrap; /* Prohíbe que el texto se parta en dos líneas */
+        height: 40px; /* Misma altura exacta para los dos botones */
+        
+        /* Centramos el texto por si sobra espacio */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    /* SECCIÓN SOBRE MÍ */
-    .bottom-text {
-        padding-bottom: 50px; 
+    /* 5. SEPARACIÓN FINAL (Para que no se pelee con el footer de contacto) */
+    .project-details-view {
+        padding-bottom: 100px; /* Deja espacio al final de las fotos */
     }
 }
