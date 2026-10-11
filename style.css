@@ -984,7 +984,7 @@ footer a { color: #d185e4; }
 
     /* 2. Skills: Pequeñas y en la esquina inferior derecha */
     .scrap-skills {
-        width: 60% !important;
+        width: 65% !important;
         bottom: 10% !important; /* Desplazado hacia abajo para salir de la libreta */
         right: 5% !important; /* Bien pegado a la derecha */
     }
@@ -993,6 +993,6 @@ footer a { color: #d185e4; }
     .scrap-title {
         font-size: 5.0rem !important; /* Pequeño y compacto */
         top: 6% !important; /* Muy abajo */
-        right: 10% !important; /* Pegado a la izquierda */
+        right: 20% !important; /* Pegado a la derecha */
     }
 }
