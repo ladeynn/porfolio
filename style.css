@@ -985,14 +985,14 @@ footer a { color: #d185e4; }
     /* 2. Skills: Pequeñas y en la esquina inferior derecha */
     .scrap-skills {
         width: 33% !important;
-        bottom: -1% !important; /* Desplazado hacia abajo para salir de la libreta */
-        right: 1% !important; /* Bien pegado a la derecha */
+        bottom: 5% !important; /* Desplazado hacia abajo para salir de la libreta */
+        right: 5% !important; /* Bien pegado a la derecha */
     }
 
     /* 3. Título Cursivo (El texto 'About me'): En la esquina inferior izquierda */
     .scrap-title {
         font-size: 3.5rem !important; /* Pequeño y compacto */
-        bottom: 1% !important; /* Muy abajo */
-        left: 5% !important; /* Pegado a la izquierda */
+        top: 3% !important; /* Muy abajo */
+        left: 10% !important; /* Pegado a la izquierda */
     }
 }
