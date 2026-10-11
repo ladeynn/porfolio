@@ -932,18 +932,26 @@ footer a { color: #d185e4; }
         padding: 120px 10px 160px 10px; /* Mucho más aire arriba y abajo en móvil */
     }
 
-    /* Modificamos el contenedor para hacerlo más largo verticalmente en pantallas pequeñas */
+    /* Contenedor principal en móvil */
     .scrapbook-container {
         width: 100%;
-        max-width: 100%;
-        /* Aumentamos la altura de la zona interactiva para que las pegatinas se desplacen abajo */
-        min-height: 550px; 
+        min-height: 650px; /* Le damos una altura fija para que quepa todo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Esconde los bordes de la imagen al girar */
     }
 
-    /* Forzamos al fondo a ocupar todo el contenedor estirándose sin perder calidad */
+    /* Giramos la carpeta 90 grados */
     .scrapbook-bg {
-        height: 550px; /* Estiramos la libreta a lo alto en móvil */
-        object-fit: fill; /* Hace que encaje en el nuevo formato estirado */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 100vw; /* Su alto ahora es el ancho de la pantalla */
+        min-width: 650px; /* Su ancho compensa la altura del contenedor */
+        /* Lo centramos y lo giramos */
+        transform: translate(-50%, -50%) rotate(90deg); 
+        object-fit: cover;
     }
 
     /* EL TEXTO: Más pequeño, con más margen y centrado */
