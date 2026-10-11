@@ -947,7 +947,7 @@ footer a { color: #d185e4; }
         position: absolute;
         top: 50%;
         left: 50%;
-        height: 85vw; /* Su alto ahora es el ancho de la pantalla */
+        height: 100vw; /* Su alto ahora es el ancho de la pantalla */
         min-width: 650px; /* Su ancho compensa la altura del contenedor */
         /* Lo centramos y lo giramos */
         transform: translate(-50%, -50%) rotate(-90deg); 
@@ -992,7 +992,8 @@ footer a { color: #d185e4; }
     /* 3. Título Cursivo (El texto 'About me'): En la esquina inferior izquierda */
     .scrap-title {
         font-size: 5.0rem !important; /* Pequeño y compacto */
-        top: 6% !important; /* Muy abajo */
-        left: 15% !important; /* Pegado a la derecha */
+        bottom: auto !important; /* CRUCIAL: borra la posición de abajo que tenía antes */
+        left: auto !important;   /* CRUCIAL: borra la posición izquierda */
+        right: 5% !important;    /* Lo pegamos a la derecha del papel */
     }
 }
