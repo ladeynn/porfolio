@@ -948,7 +948,7 @@ footer a { color: #d185e4; }
         top: 50%;
         left: 50%;
         height: 100vw; /* Su alto ahora es el ancho de la pantalla */
-        min-width: 650px; /* Su ancho compensa la altura del contenedor */
+        min-width: 600px; /* Su ancho compensa la altura del contenedor */
         /* Lo centramos y lo giramos */
         transform: translate(-50%, -50%) rotate(-90deg); 
         object-fit: cover;
@@ -978,14 +978,14 @@ footer a { color: #d185e4; }
     /* 1. Polaroid: Pequeña y en la esquina superior izquierda */
     .scrap-polaroid {
         width: 32% !important; /* Más reducida */
-        top: 2% !important; /* Lo subimos casi al borde de la libreta */
+        top: 7% !important; /* Lo subimos casi al borde de la libreta */
         left: 3% !important; /* Desplazado al borde izquierdo */
     }
 
     /* 2. Skills: Pequeñas y en la esquina inferior derecha */
     .scrap-skills {
-        width: 40% !important;
-        bottom: 5% !important; /* Desplazado hacia abajo para salir de la libreta */
+        width: 60% !important;
+        bottom: 10% !important; /* Desplazado hacia abajo para salir de la libreta */
         right: 5% !important; /* Bien pegado a la derecha */
     }
 
@@ -993,6 +993,6 @@ footer a { color: #d185e4; }
     .scrap-title {
         font-size: 5.0rem !important; /* Pequeño y compacto */
         top: 6% !important; /* Muy abajo */
-        left: 20% !important; /* Pegado a la izquierda */
+        right: 20% !important; /* Pegado a la izquierda */
     }
 }
