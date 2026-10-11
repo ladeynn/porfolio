@@ -978,14 +978,14 @@ footer a { color: #d185e4; }
     /* 1. Polaroid: Pequeña y en la esquina superior izquierda */
     .scrap-polaroid {
         width: 32% !important; /* Más reducida */
-        top: 8% !important; /* Lo subimos casi al borde de la libreta */
+        top: 7% !important; /* Lo subimos casi al borde de la libreta */
         left: 3% !important; /* Desplazado al borde izquierdo */
     }
 
     /* 2. Skills: Pequeñas y en la esquina inferior derecha */
     .scrap-skills {
         width: 60% !important;
-        bottom: 10% !important; /* Desplazado hacia abajo para salir de la libreta */
+        bottom: 8% !important; /* Desplazado hacia abajo para salir de la libreta */
         right: 5% !important; /* Bien pegado a la derecha */
     }
 
