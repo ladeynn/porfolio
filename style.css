@@ -947,7 +947,7 @@ footer a { color: #d185e4; }
         position: absolute;
         top: 50%;
         left: 50%;
-        height: 90vw; /* Su alto ahora es el ancho de la pantalla */
+        height: 100vw; /* Su alto ahora es el ancho de la pantalla */
         min-width: 650px; /* Su ancho compensa la altura del contenedor */
         /* Lo centramos y lo giramos */
         transform: translate(-50%, -50%) rotate(-90deg); 
@@ -956,7 +956,7 @@ footer a { color: #d185e4; }
 
     /* EL TEXTO: Más pequeño, con más margen y centrado */
     .scrapbook-text-area {
-        width: 78%; /* Es más estrecho para no colisionar con la foto de la izquierda */
+        width: 60%; /* Es más estrecho para no colisionar con la foto de la izquierda */
         left: 51%; /* Lo centramos un poco más */
         top: 48%; /* Lo empujamos ligeramente hacia arriba */
     }
@@ -993,6 +993,6 @@ footer a { color: #d185e4; }
     .scrap-title {
         font-size: 5.0rem !important; /* Pequeño y compacto */
         top: 6% !important; /* Muy abajo */
-        right: 20% !important; /* Pegado a la derecha */
+        right: 15% !important; /* Pegado a la derecha */
     }
 }
