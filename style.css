@@ -978,22 +978,22 @@ footer a { color: #d185e4; }
     /* 1. Polaroid: Pequeña y en la esquina superior izquierda */
     .scrap-polaroid {
         width: 32% !important; /* Más reducida */
-        top: 7% !important; /* Lo subimos casi al borde de la libreta */
+        top: 4% !important; /* Lo subimos casi al borde de la libreta */
         left: 3% !important; /* Desplazado al borde izquierdo */
     }
 
     /* 2. Skills: Pequeñas y en la esquina inferior derecha */
     .scrap-skills {
         width: 60% !important;
-        bottom: 8% !important; /* Desplazado hacia abajo para salir de la libreta */
+        bottom: 6% !important; /* Desplazado hacia abajo para salir de la libreta */
         right: 5% !important; /* Bien pegado a la derecha */
     }
 
     /* 3. Título Cursivo (El texto 'About me'): En la esquina inferior izquierda */
     .scrap-title {
-        font-size: 4.0rem !important; /* Pequeño y compacto */
-        top: 20% !important; /* CRUCIAL: borra la posición de abajo que tenía antes */
+        font-size: 4.5rem !important; /* Pequeño y compacto */
+        top: 16% !important; /* CRUCIAL: borra la posición de abajo que tenía antes */
         left: auto !important;   /* CRUCIAL: borra la posición izquierda */
-        right: 5% !important;    /* Lo pegamos a la derecha del papel */
+        right: 7% !important;    /* Lo pegamos a la derecha del papel */
     }
 }
