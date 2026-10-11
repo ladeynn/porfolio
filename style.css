@@ -94,12 +94,36 @@ body {
 }
 
 .hero h1 {
-    font-size: 4rem; 
-    font-weight: 700;
-    margin-bottom: 15px;
-    letter-spacing: -2px;
-    line-height: 1.1;
-    text-transform: uppercase;
+    font-family: 'Great Vibes', cursive; 
+    font-size: 15rem; 
+
+    font-weight: normal; /* Evita que el navegador rompa la letra al intentar hacerla negrita */
+    letter-spacing: normal; /* Evita que las letras se aplasten y se rompan los enlaces */
+    
+    color: #d185e4;
+    text-shadow: 
+        -1.0px -1.0px 0 #111,  
+         1.0px -1.0px 0 #111,
+        -1.0px  1.0px 0 #111,
+         1.0px  1.0px 0 #111,
+         3px 5px 10px rgba(0,0,0,1.0);
+    
+    text-transform: none; 
+    margin-bottom: 2px; 
+    
+    line-height: normal; /* Dejamos que la fuente use su altura natural */
+    padding: 20px 10px 0px 10px; /* El tercer valor (0px) quita el espacio de relleno por debajo */
+    display: inline-block; /* Ayuda a que el navegador respete la caja completa */
+}
+
+/* Añadimos este bloque nuevo para el subtítulo */
+.hero-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem; /* Más grande */
+    font-weight: 700; /* Negrita */
+    text-transform: uppercase; /* Forzamos mayúsculas */
+    letter-spacing: 2px; /* Espacio entre letras elegante */
+    margin-bottom: 0px;
     color: white;
 }
 
@@ -483,7 +507,6 @@ footer a { color: #d185e4; }
 /* --- RESPONSIVE (MÓVIL) --- */
 @media (max-width: 768px) {
     
-    .hero h1 { font-size: 2.5rem; }
     h2 { font-size: 2rem; }
     
     .timeline-visual {
@@ -791,8 +814,13 @@ footer a { color: #d185e4; }
     }
     
     .hero h1 {
-        font-size: 2.5rem; 
+        font-size: 3.5rem; /* Adaptamos la cursiva al móvil */
         line-height: 1.2;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem; /* Adaptamos el subtítulo al móvil */
+        letter-spacing: 1px;
     }
 }
 
@@ -899,10 +927,12 @@ footer a { color: #d185e4; }
     font-size: 12rem; /* Ajusta este número para hacerlo más grande o más pequeño */
     
     color: #111; /* Color interior oscuro */
-    -webkit-text-stroke: 1.5px #d185e4; /* Borde morado como en tu diseño */
-    
-    /* Sombra para separarlo del fondo */
-    text-shadow: 3px 5px 10px rgba(0,0,0,0.6);
+    text-shadow: 
+        -1.5px -1.5px 0 #d185e4,  
+         1.5px -1.5px 0 #d185e4,
+        -1.5px  1.5px 0 #d185e4,
+         1.5px  1.5px 0 #d185e4,
+         3px 5px 10px rgba(0,0,0,0.6); /* La sombra oscura original */
     
     /* Posición flotante */
     bottom: -5%; 
@@ -995,5 +1025,187 @@ footer a { color: #d185e4; }
         top: 8% !important; /* CRUCIAL: borra la posición de abajo que tenía antes */
         left: auto !important;   /* CRUCIAL: borra la posición izquierda */
         right: 7% !important;    /* Lo pegamos a la derecha del papel */
+    }
+}
+
+/* =========================================
+   SECCIÓN DE CONTACTO (SOBRE Y TARJETA)
+   ========================================= */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 5%;
+    min-height: 80vh;
+    background-color: #111;
+    gap: 0px; /* Separación entre el título y el sobre */
+    overflow: hidden;
+}
+
+/* --- TÍTULO --- */
+.contact-title-area {
+    display: flex;
+    flex-direction: column;
+    width: 480px; /* Le damos un ancho fijo para poder jugar con izquierda y derecha */
+    z-index: 10; 
+    margin-right: -200px; /* Para que muerda el sobre */
+
+    margin-top: -500px;
+}
+
+.contact-title-area h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+/* Alineación específica para "LET'S" (El primer h2) */
+.contact-title-area h2:first-of-type {
+    text-align: left; 
+    padding-left: 58px; /* Un poco de margen para que respire */
+}
+
+/* Alineación específica para "TOGETHER!" (El último h2) */
+.contact-title-area h2:last-of-type {
+    text-align: left; 
+    padding-left: 220px; /* Lo empujamos para que encaje bajo la cursiva */
+}
+
+.contact-cursive {
+    font-family: 'Great Vibes', cursive; 
+    font-size: 8rem;
+    font-weight: normal;
+    color: #d185e4;
+    text-shadow: 
+        -1.0px -1.0px 0 #111,  
+         1.0px -1.0px 0 #111,
+        -1.0px  1.0px 0 #111,
+         1.0px  1.0px 0 #111,
+         3px 5px 10px rgba(0,0,0,0.6);
+    text-align: center; /* Centramos la cursiva en la caja */
+    margin: -15px -100px -15px 0; /* Ajuste para que sobresalga por la derecha */
+    
+    text-transform: none;
+    line-height: normal;
+    position: relative;
+    z-index: 15;
+}
+
+/* --- EL SOBRE Y LA TARJETA --- */
+.envelope-container {
+    position: relative;
+    width: 650px;
+    max-width: 100%;
+}
+
+.envelope-img {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 3; /* El sobre por encima */
+    pointer-events: none; /* Permite hacer clic en la tarjeta aunque el sobre esté superpuesto */
+}
+
+.contact-card {
+    position: absolute;
+    top: 62%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    
+    background-color: #ffffff; /* Tarjeta blanca */
+    width: 55%; /* La hacemos un poco más estrecha para que se vea más sobre */
+    padding: 25px 35px;
+    
+    z-index: 10; 
+    mix-blend-mode: multiply; 
+    opacity: 0.9; 
+}
+
+.card-label {
+    color: #d185e4;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.card-email {
+    display: block;
+    color: #111;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    margin-bottom: 30px;
+    transition: color 0.3s;
+}
+
+.card-email:hover {
+    color: #d185e4;
+}
+
+.social-icons a {
+    color: #111;
+    font-size: 2.8rem;
+    margin-right: 20px;
+    transition: transform 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: #d185e4;
+    transform: translateY(-5px); /* Pequeño saltito al pasar el ratón */
+}
+
+/* --- ADAPTACIÓN PARA MÓVIL --- */
+@media (max-width: 900px) {
+    .contact-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding-top: 100px;
+    }
+    
+    .contact-title-area {
+        text-align: center;
+        width: 100%; /* Forzamos a que ocupe el ancho de la pantalla */
+        margin-right: 0; 
+        margin-top: 0; /* Quitamos la subida en móvil */
+        z-index: 20;
+    }
+    
+    .contact-title-area h2 {
+        font-size: 3rem;
+    }
+
+    /* ⬇️ LA PARTE CLAVE PARA MÓVIL ⬇️ */
+    /* Obligamos a que 'LET'S' y 'TOGETHER!' se centren y pierdan el escalonado */
+    .contact-title-area h2:first-of-type,
+    .contact-title-area h2:last-of-type {
+        text-align: center;
+        padding: 0;
+    }
+    
+    .contact-cursive {
+        font-size: 5rem;
+        margin: -10px 0;
+    }
+    
+    .contact-card {
+        top: 60%;
+        width: 80%;
+        padding: 20px;
+        transform: translate(-50%, -50%); 
+    }
+    
+    .card-email {
+        font-size: 1.1rem;
+    }
+    
+    .social-icons a {
+        font-size: 2.2rem;
     }
 }

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -845,18 +846,35 @@
 
 </main>
 
-    <footer id="contacto">
-    <h2>Let's create together!</h2>
-    <p>Write me at <a href="mailto:lauradcc13@gmail.com">lauradcc13@gmail.com</a></p>
-    
-    <div class="socials">
-        <a href="https://www.linkedin.com/in/laura-de-la-cruz-ca%C3%B1adas-541557357" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        
-        <span class="separator">|</span>
-        
-        <a href="https://ladeynn.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
+<section id="contacto" class="contact-section">
+    <!-- Columna Izquierda: Títulos -->
+    <div class="contact-title-area">
+        <h2>LET'S</h2>
+        <h3 class="contact-cursive">create worlds</h3>
+        <h2>TOGETHER!</h2>
     </div>
-</footer>
+
+    <!-- Columna Derecha: El sobre y la tarjeta -->
+    <div class="envelope-container">
+        <!-- AQUÍ PONDRÁS LA IMAGEN DE TU SOBRE -->
+        <!-- Cambia 'img/sobre.png' por el nombre real de tu imagen del sobre -->
+        <img src="img/sobre.png" alt="Sobre transparente" class="envelope-img">
+        
+        <!-- La tarjeta blanca que va encima/dentro -->
+        <div class="contact-card">
+            <p class="card-label">EMAIL</p>
+            <a href="mailto:lauradcc13@gmail.com" class="card-email">LAURADCC13@GMAIL.COM</a>
+            
+            <p class="card-label">FIND ME ON</p>
+            <div class="social-icons">
+                <!-- Icono de Itchio -->
+                <a href="https://ladeynn.itch.io/" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+                <!-- Icono de LinkedIn -->
+                <a href="https://www.linkedin.com/in/laura-de-la-cruz-ca%C3%B1adas-541557357" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <script src="script.js"></script> 
 </body>
