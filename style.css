@@ -947,7 +947,7 @@ footer a { color: #d185e4; }
         position: absolute;
         top: 50%;
         left: 50%;
-        height: 100vw; /* Su alto ahora es el ancho de la pantalla */
+        height: 85vw; /* Su alto ahora es el ancho de la pantalla */
         min-width: 650px; /* Su ancho compensa la altura del contenedor */
         /* Lo centramos y lo giramos */
         transform: translate(-50%, -50%) rotate(-90deg); 
