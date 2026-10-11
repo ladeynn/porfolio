@@ -935,7 +935,7 @@ footer a { color: #d185e4; }
     /* Contenedor principal en móvil */
     .scrapbook-container {
         width: 100%;
-        min-height: 600px; /* Le damos una altura fija para que quepa todo */
+        min-height: 650px; /* Le damos una altura fija para que quepa todo */
         display: flex;
         justify-content: center;
         align-items: center;
