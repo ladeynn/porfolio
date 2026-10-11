@@ -992,7 +992,7 @@ footer a { color: #d185e4; }
     /* 3. Título Cursivo (El texto 'About me'): En la esquina inferior izquierda */
     .scrap-title {
         font-size: 4.5rem !important; /* Pequeño y compacto */
-        top: 17% !important; /* CRUCIAL: borra la posición de abajo que tenía antes */
+        top: 8% !important; /* CRUCIAL: borra la posición de abajo que tenía antes */
         left: auto !important;   /* CRUCIAL: borra la posición izquierda */
         right: 7% !important;    /* Lo pegamos a la derecha del papel */
     }
