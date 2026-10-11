@@ -6,6 +6,7 @@
     <title>Laura's porfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -26,45 +27,33 @@
         </div>
     </header>
 
-    <section id="sobre-mi" class="about-cv-narrative">
+    <section id="sobre-mi" class="about-scrapbook">
     
-
-    <div class="narrative-container">
+    <!-- Contenedor principal que mantiene las proporciones -->
+    <div class="scrapbook-container">
         
-        <div class="top-text">
-            <p>A Madrid-based proactive Video Game Design and Development student, eager to work in the audiovisual field. 
-                I’m passionate about creating worlds and characters, but I especially enjoy creating environments to tell 
-                stories from another perspective. In my free time i like to devour books and play video games, always eager 
-                to immerse myself in a new story. People say I’m a good team, easy-going and a creative person.</p>
-        </div>
+        <!-- 1. EL FONDO -->
+        <img src="img/AboutMe/carpeta-fondo.png" class="scrapbook-bg" alt="Fondo Scrapbook">
 
-        <div class="timeline-visual">
+        <!-- 2. EL TEXTO Y EL BOTÓN (Centrados en el papel) -->
+        <div class="scrapbook-text-area">
+            <p>I'm Laura, a Madrid-based proactive Video Game Design and Development student, 
+                eager to work in the audiovisual field. I'm passionate about creating worlds and characters, 
+                but I especially enjoy creating environments to tell stories from another perspective. 
+                In my free time i like to devour books and play video games, always eager to immerse myself in a new story. 
+                People say I'm a good team player, easy-going and a creative person.</p>
             
-            <div class="polaroid-item rotate-left">
-                <div class="polaroid-frame" alt="Yo de pequeña">
-                    <img src="img/yo.jpg">
-                </div>
-            </div>
-
-            <div class="connector">
-                <img src="img/squiggle_line.png" alt="línea" class="squiggle">
-            </div>
-
-            <div class="polaroid-item rotate-right">
-                 <div class="polaroid-frame">
-                    <img src="img/yo_dibujo.jpg" alt="Yo ahora">
-                 </div>
-            </div>
+            <a href="img/cv-laura.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume-scrap">RESUME (PDF)</a>
         </div>
 
-        <div class="bottom-text">
-            <p>Tools and Skills</p>
-            <p>Procreate and Photoshop</p>
-            <p>Unity</p>
-            <p>3D Studio Max and Blender</p>
-            <p>Substance Painter</p> 
-            <a href="img/cv-laura.pdf" target="_blank" rel="noopener noreferrer" class="btn-cta small-btn">Resume (PDF)</a>
-        </div>
+        <!-- 3. LA POLAROID (Flotando arriba a la izquierda) -->
+        <img src="img/AboutMe/polaroid-clip.png" class="scrap-element scrap-polaroid" alt="Laura Polaroid">
+
+        <!-- 4. LAS SKILLS (Flotando abajo a la derecha) -->
+        <img src="img/AboutMe/skills-box.png" class="scrap-element scrap-skills" alt="My Skills">
+
+        <!-- 5. TÍTULO ABOUT ME (Flotando abajo a la izquierda) -->
+        <h2 class="scrap-element scrap-title">About me</h2>
 
     </div>
 </section>

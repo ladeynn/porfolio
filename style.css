@@ -795,3 +795,173 @@ footer a { color: #d185e4; }
         line-height: 1.2;
     }
 }
+
+/* =========================================
+   ESTILOS NUEVO ABOUT (SCRAPBOOK)
+   ========================================= */
+
+.about-scrapbook {
+    background-color: #111; /* Mantiene el fondo oscuro de la web */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    overflow: hidden; /* Evita que los elementos flotantes creen scroll horizontal */
+}
+
+/* El contenedor actúa como la "mesa" donde ponemos los recortes */
+.scrapbook-container {
+    position: relative; /* CRUCIAL para que los elementos absolutos se queden dentro */
+    width: 100%;
+    max-width: 1000px; /* Ancho máximo para la carpeta */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* La imagen de la carpeta de fondo */
+.scrapbook-bg {
+    width: 95%;
+    height: auto;
+    display: block;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5); /* Sombra para darle volumen */
+}
+
+/* El área donde va el texto, colocada encima del papel */
+.scrapbook-text-area {
+    position: absolute;
+    width: 60%; /* Ajusta este % según cuánto espacio en blanco tenga tu imagen de fondo */
+    text-align: left;
+    color: #111; /* Texto oscuro para que se lea sobre el papel claro */
+    top: 32%;
+    left: 62%; /* Ligeramente desplazado a la derecha para dejar hueco a la polaroid */
+    transform: translate(-50%, -50%); /* Lo centra perfectamente en su zona */
+}
+
+.scrapbook-text-area p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+/* Botón de Resume */
+.btn-resume-scrap {
+    display: inline-block;
+    background-color: transparent; /* Fondo transparente */
+    color: #111; /* Texto oscuro */
+    padding: 10px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #111; /* Borde oscuro */
+    transition: all 0.3s;
+}
+
+.btn-resume-scrap:hover {
+    background-color: #111; /* Al pasar el ratón se rellena de oscuro */
+    color: white; /* Y el texto se vuelve blanco */
+}
+
+/* --- ELEMENTOS FLOTANTES (RECORTES) --- */
+.scrap-element {
+    position: absolute;
+    z-index: 10; /* Los pone por encima del fondo y el texto */
+    filter: drop-shadow(5px 10px 15px rgba(0,0,0,0.4)); /* Sombra realista de papel recortado */
+    transition: transform 0.3s ease;
+}
+
+/* 1. Polaroid */
+.scrap-polaroid {
+    width: 35%; /* Tamaño relativo al contenedor */
+    top: -2%; 
+    left: -5%;
+    
+}
+.scrap-polaroid:hover { transform: rotate(-2deg) scale(1.05); }
+
+/* 2. Skills */
+.scrap-skills {
+    width: 45%;
+    bottom: 1%;
+    right: 4%;
+    
+}
+.scrap-skills:hover { transform: rotate(3deg) scale(1.05); }
+
+/* 3. Título Cursivo */
+.scrap-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 12rem; /* Ajusta este número para hacerlo más grande o más pequeño */
+    
+    color: #111; /* Color interior oscuro */
+    -webkit-text-stroke: 1.5px #d185e4; /* Borde morado como en tu diseño */
+    
+    /* Sombra para separarlo del fondo */
+    text-shadow: 3px 5px 10px rgba(0,0,0,0.6);
+    
+    /* Posición flotante */
+    bottom: -5%; 
+    left: -5%; 
+
+    margin: 0; /* Quita márgenes por defecto del h2 */
+    z-index: 10;
+}
+
+/* Ajuste del tamaño para móvil */
+@media (max-width: 768px) {
+    .scrap-title {
+        font-size: 3.5rem; /* Más pequeño en móvil */
+        bottom: 0%;
+        left: 0%;
+    }
+}
+
+/* =========================================
+   ADAPTACIÓN PARA MÓVIL (Menos de 768px)
+   ========================================= */
+@media (max-width: 768px) {
+    .scrapbook-container {
+        /* Damos un poco de margen extra para que no se pegue a los bordes del móvil */
+        width: 95%; 
+    }
+
+    .scrapbook-text-area {
+        width: 75%; /* El texto ocupa más espacio en móvil */
+        left: 50%;
+        top: 45%; /* Subimos el texto un poco */
+    }
+
+    .scrapbook-text-area p {
+        font-size: 0.75rem; /* Texto más pequeño para móvil */
+        line-height: 1.4;
+    }
+
+    .btn-resume-scrap {
+        padding: 8px 15px;
+        font-size: 0.7rem;
+    }
+
+    /* Reducimos el tamaño de los recortes y ajustamos su posición */
+    .scrap-polaroid {
+        width: 40%;
+        top: -8%;
+        left: -2%;
+    }
+
+    .scrap-skills {
+        width: 35%;
+        bottom: -5%;
+        right: 0%;
+    }
+
+    .scrap-title {
+        width: 50%;
+        bottom: 0%;
+        left: -5%;
+    }
+}
