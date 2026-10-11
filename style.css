@@ -925,43 +925,67 @@ footer a { color: #d185e4; }
    ADAPTACIÓN PARA MÓVIL (Menos de 768px)
    ========================================= */
 @media (max-width: 768px) {
-    .scrapbook-container {
-        /* Damos un poco de margen extra para que no se pegue a los bordes del móvil */
-        width: 95%; 
+    
+    /* Hacemos que la sección crezca a lo alto para que quepan todos los recortes */
+    .about-scrapbook {
+        min-height: auto;
+        padding: 120px 10px 160px 10px; /* Mucho más aire arriba y abajo en móvil */
     }
 
+    /* Modificamos el contenedor para hacerlo más largo verticalmente en pantallas pequeñas */
+    .scrapbook-container {
+        width: 100%;
+        max-width: 100%;
+        /* Aumentamos la altura de la zona interactiva para que las pegatinas se desplacen abajo */
+        min-height: 550px; 
+    }
+
+    /* Forzamos al fondo a ocupar todo el contenedor estirándose sin perder calidad */
+    .scrapbook-bg {
+        height: 550px; /* Estiramos la libreta a lo alto en móvil */
+        object-fit: fill; /* Hace que encaje en el nuevo formato estirado */
+    }
+
+    /* EL TEXTO: Más pequeño, con más margen y centrado */
     .scrapbook-text-area {
-        width: 75%; /* El texto ocupa más espacio en móvil */
-        left: 50%;
-        top: 45%; /* Subimos el texto un poco */
+        width: 78%; /* Es más estrecho para no colisionar con la foto de la izquierda */
+        left: 51%; /* Lo centramos un poco más */
+        top: 48%; /* Lo empujamos ligeramente hacia arriba */
     }
 
     .scrapbook-text-area p {
-        font-size: 0.75rem; /* Texto más pequeño para móvil */
+        font-size: 0.75rem !important; /* Más pequeño para que quepa en el papel */
         line-height: 1.4;
+        margin-bottom: 12px;
     }
 
+    /* Adaptación del botón Resume (Más compacto para que no pise nada) */
     .btn-resume-scrap {
-        padding: 8px 15px;
+        padding: 6px 15px;
         font-size: 0.7rem;
     }
 
-    /* Reducimos el tamaño de los recortes y ajustamos su posición */
+    /* --- LOS RECORTES (Más compactos y colocados en vertical) --- */
+
+    /* 1. Polaroid: Pequeña y en la esquina superior izquierda */
     .scrap-polaroid {
-        width: 40%;
-        top: -8%;
-        left: -2%;
+        width: 32% !important; /* Más reducida */
+        top: -4% !important; /* Lo subimos casi al borde de la libreta */
+        left: 3% !important; /* Desplazado al borde izquierdo */
     }
 
+    /* 2. Skills: Pequeñas y en la esquina inferior derecha */
     .scrap-skills {
-        width: 35%;
-        bottom: -5%;
-        right: 0%;
+        width: 28% !important;
+        bottom: -6% !important; /* Desplazado hacia abajo para salir de la libreta */
+        right: 1% !important; /* Bien pegado a la derecha */
     }
 
+    /* 3. Título Cursivo (El texto 'About me'): En la esquina inferior izquierda */
     .scrap-title {
-        width: 50%;
-        bottom: 0%;
-        left: -5%;
+        font-size: 3.5rem !important; /* Pequeño y compacto */
+        bottom: -2% !important; /* Muy abajo */
+        left: 5% !important; /* Pegado a la izquierda */
+        transform: rotate(-6deg) !important;
     }
 }
